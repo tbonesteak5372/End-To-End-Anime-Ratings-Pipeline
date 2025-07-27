@@ -126,6 +126,9 @@ anime_ratings_pipeline/
 - Current setup runs on manual trigger but can be scheduled with cron expressions.
 
 ---
+## Create Role and Allow Presets IP to connect to SF DB
+<img width="717" height="589" alt="image" src="https://github.com/user-attachments/assets/43180b11-6771-49bc-a7c8-a3cf0644364e" />
+
 --
 
 ## Dashboard created using Apache Superset:
