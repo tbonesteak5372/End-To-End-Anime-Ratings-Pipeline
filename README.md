@@ -14,7 +14,7 @@ The pipeline is containerized with Docker and structured to support modular deve
 ---
 
 ## Architecture - Anime Ratings Pipeline
-<img width="1070" height="748" alt="image" src="https://github.com/user-attachments/assets/42f948d7-07ec-475b-96f2-ab806956a54f" />
+<img width="850" height="481" alt="image" src="https://github.com/user-attachments/assets/1c118be9-d878-421a-ac6c-eac45ee5641b" />
 
 
 ---
@@ -126,11 +126,11 @@ anime_ratings_pipeline/
 - Current setup runs on manual trigger but can be scheduled with cron expressions.
 
 ---
-## Create Role and Allow Apache Superset's IP to connect to SF DB
+## Create Role and Allow Apache Preset's IP to connect to SF DB
 <img width="717" height="589" alt="image" src="https://github.com/user-attachments/assets/43180b11-6771-49bc-a7c8-a3cf0644364e" />
 
 --
 
-## Dashboard created using Apache Superset:
+## Dashboard created using Apache Preset:
 <img width="1869" height="943" alt="image" src="https://github.com/user-attachments/assets/61be4e67-29fb-4334-8930-e786fd1ab453" />
 
