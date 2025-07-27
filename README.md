@@ -1,7 +1,7 @@
 
 # Anime Ratings - End-to-End Data Pipeline
 
-An end-to-end data engineering pipeline demonstrating the use of Apache Airflow, dbt, and Snowflake to extract, load, transform, and visualize anime ratings data from Kaggle. This project simulates a real-world ETL orchestration of 10M records, processed using Python, Docker, and cloud data warehousing.
+An end-to-end data engineering pipeline demonstrating the use of Apache Airflow, dbt, and Snowflake to extract, load, transform, and visualize anime ratings data from Kaggle. This project simulates a real-world ELT orchestration of 10M records, processed using Python, Docker, and cloud data warehousing.
 
 ---
 
