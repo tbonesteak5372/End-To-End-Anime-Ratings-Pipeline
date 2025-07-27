@@ -60,33 +60,8 @@ anime_ratings_pipeline/
 ---
 
 ## Entity Relationship Diagram (ERD)
+<img width="889" height="575" alt="image" src="https://github.com/user-attachments/assets/508ba7ec-c1cf-470e-bd55-0c426e091042" />
 
-This simplified ERD helps map the relationship between anime and ratings datasets, and guides transformations in dbt.
-┌──────────────────────── ANIMES ────────────────────────┐
-│ animeID           INTEGER PRIMARY KEY                 │
-│ title             VARCHAR(255)                        │
-│ alternative_title VARCHAR(255)                        │
-│ type              VARCHAR(100)                        │
-│ year              INTEGER                             │
-│ score             FLOAT                               │
-│ episodes          INTEGER                             │
-│ mal_url           VARCHAR(500)                        │
-│ sequel            VARCHAR(255)                        │
-│ image_url         VARCHAR(500)                        │
-│ genres            TEXT                                │
-│ genres_detailed   TEXT                                │
-└────────────────────────────────────────────────────────┘
-                        ▲
-                        │
-                        │ 1
-                        │
-                        │
-                        ▼
-┌──────────────────────── RATINGS ───────────────────────┐
-│ userID            INTEGER                             │
-│ animeID           INTEGER  ────► References ANIMES     │
-│ rating            INTEGER                             │
-└────────────────────────────────────────────────────────┘
 ---
 
 ## Pipeline Components
