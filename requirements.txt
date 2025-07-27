@@ -1,0 +1,6 @@
+pandas
+kaggle
+python-dotenv
+snowflake-connector-python
+dbt-core
+dbt-snowflake

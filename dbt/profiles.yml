@@ -1,0 +1,13 @@
+my_dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: zzxsyjg-iu93538  # like abcd-xy12345
+      user: TBONESTEAK5372
+      password: PaidLike45BucksForALineUp
+      role: DBT_ROLE
+      database: DBT_DB
+      warehouse: DBT_WH
+      schema: DBT_SCHEMA
+      threads: 1

@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw  # <-- use this in `source('raw', 'ratings')`
+    database: DBT_DB
+    schema: DBT_SCHEMA
+    tables:
+      - name: ratings
+      - name: animes

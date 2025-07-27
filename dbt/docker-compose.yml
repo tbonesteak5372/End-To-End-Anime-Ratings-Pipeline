@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  dbt:
+    build: .
+    container_name: dbt_container
+    volumes:
+      - .:/usr/app
+    working_dir: /usr/app
+    environment:
+      - DBT_PROFILES_DIR=/usr/app/.dbt
+    entrypoint: ["dbt"]
+    tty: true

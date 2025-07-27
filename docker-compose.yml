@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  dbt-airflowproject:
+    image:  dbt-airflowproject:latest
+
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./dbt:/opt/airflow/dbt
+      - ./kaggle:/opt/airflow/.kaggle
+      - ./data:/opt/airflow/data
+    
+    env_file:
+      - .env
+
+    environment:
+      - KAGGLE_CONFIG_DIR=/opt/airflow/.kaggle
+      - DBT_PROFILES_DIR=/opt/airflow/dbt
+
+    ports:
+      - "8080:8080"
+
+    command: airflow standalone 
