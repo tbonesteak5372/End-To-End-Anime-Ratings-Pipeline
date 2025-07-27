@@ -128,3 +128,7 @@ anime_ratings_pipeline/
 ---
 --
 
+## Dashboard created using Apache Superset:
+<img width="1864" height="921" alt="image" src="https://github.com/user-attachments/assets/32f0303e-2812-44c5-bbff-fe11c6138a26" />
+
+
