@@ -82,7 +82,7 @@ anime_ratings_pipeline/
 <img width="731" height="186" alt="image" src="https://github.com/user-attachments/assets/79241951-d715-4b38-af05-610800927fff" />
 
 ---
-## 2.5 Create DW, DB, ROLE, AND TABLE
+## 2.5 Create DW, DB, and Role
 <img width="740" height="492" alt="image" src="https://github.com/user-attachments/assets/e2c86005-f89b-4282-981d-8827d5cc2f08" />
 
 ### 3. Load to Snowflake - Python Connector
