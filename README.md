@@ -14,7 +14,8 @@ The pipeline is containerized with Docker and structured to support modular deve
 ---
 
 ## Architecture - Anime Ratings Pipeline
-<img width="1314" height="744" alt="system design" src="https://github.com/user-attachments/assets/4a4ce5db-37cb-43b4-a327-0564274d233a" />
+<img width="1070" height="748" alt="image" src="https://github.com/user-attachments/assets/42f948d7-07ec-475b-96f2-ab806956a54f" />
+
 
 ---
 
