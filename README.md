@@ -14,8 +14,7 @@ The pipeline is containerized with Docker and structured to support modular deve
 ---
 
 ## Architecture - Anime Ratings Pipeline
-
-![System Design](./images/system_design.png)
+<img width="1314" height="744" alt="system design" src="https://github.com/user-attachments/assets/4a4ce5db-37cb-43b4-a327-0564274d233a" />
 
 ---
 
@@ -63,7 +62,31 @@ anime_ratings_pipeline/
 ## Entity Relationship Diagram (ERD)
 
 This simplified ERD helps map the relationship between anime and ratings datasets, and guides transformations in dbt.
-
+┌──────────────────────── ANIMES ────────────────────────┐
+│ animeID           INTEGER PRIMARY KEY                 │
+│ title             VARCHAR(255)                        │
+│ alternative_title VARCHAR(255)                        │
+│ type              VARCHAR(100)                        │
+│ year              INTEGER                             │
+│ score             FLOAT                               │
+│ episodes          INTEGER                             │
+│ mal_url           VARCHAR(500)                        │
+│ sequel            VARCHAR(255)                        │
+│ image_url         VARCHAR(500)                        │
+│ genres            TEXT                                │
+│ genres_detailed   TEXT                                │
+└────────────────────────────────────────────────────────┘
+                        ▲
+                        │
+                        │ 1
+                        │
+                        │
+                        ▼
+┌──────────────────────── RATINGS ───────────────────────┐
+│ userID            INTEGER                             │
+│ animeID           INTEGER  ────► References ANIMES     │
+│ rating            INTEGER                             │
+└────────────────────────────────────────────────────────┘
 ---
 
 ## Pipeline Components
@@ -72,9 +95,7 @@ This simplified ERD helps map the relationship between anime and ratings dataset
 
 - Data is extracted from Kaggle using the `kaggle.api.dataset_download_files()` method.
 - Files are saved locally in `.csv` format.
-
-**Screenshot:**
-![Kaggle Extraction](./images/dag_status_success.png)
+<img width="807" height="132" alt="image" src="https://github.com/user-attachments/assets/a9871b53-287b-456b-b8e2-b2fa0ef40d93" />
 
 ---
 
@@ -82,19 +103,19 @@ This simplified ERD helps map the relationship between anime and ratings dataset
 
 - Cleaned invalid entries (`?` values, nulls).
 - Ensured consistent data types and saved validated data to the `data/` folder.
+<img width="731" height="186" alt="image" src="https://github.com/user-attachments/assets/79241951-d715-4b38-af05-610800927fff" />
 
 ---
+## 2.5 Create DW, DB, ROLE, AND TABLE
+<img width="740" height="492" alt="image" src="https://github.com/user-attachments/assets/e2c86005-f89b-4282-981d-8827d5cc2f08" />
 
 ### 3. Load to Snowflake - Python Connector
 
 - Used `snowflake-connector-python` to connect to Snowflake.
 - Executed `PUT` and `COPY INTO` commands to load cleaned data into **staging tables**.
-
-**Screenshot:**
-![Snowflake Setup](./images/snowflake_setup.png)
+<img width="1024" height="1270" alt="image" src="https://github.com/user-attachments/assets/c41211b2-9bd1-4809-ab57-1eec252c027d" />
 
 ---
-
 ### 4. Transform - dbt
 
 - Organized dbt models into three layers:
@@ -106,10 +127,7 @@ This simplified ERD helps map the relationship between anime and ratings dataset
   - `dbt run`
   - `dbt test`
   - `dbt docs generate`
-
-**Screenshot:**
-![dbt Models Ran](./images/dbt_models_ran.png)
-
+<img width="1547" height="237" alt="dbt modes ran sucessfully" src="https://github.com/user-attachments/assets/8261c7c8-e598-4c2b-8cdc-7c6e459ff7a9" />
 ---
 
 ### 5. Orchestrate - Apache Airflow
@@ -123,10 +141,7 @@ This simplified ERD helps map the relationship between anime and ratings dataset
   - `dbt_docs`
 
 - Dockerized Airflow runs all steps with a single command.
-
-**Screenshot:**
-![Airflow Built](./images/airflow_built.png)
-
+<img width="1915" height="924" alt="orchestration sucessful" src="https://github.com/user-attachments/assets/7403def3-5145-4546-abf2-65503899f02d" />
 ---
 
 ## Pipeline Runtime Status
