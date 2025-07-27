@@ -135,22 +135,5 @@ This simplified ERD helps map the relationship between anime and ratings dataset
 - Current setup runs on manual trigger but can be scheduled with cron expressions.
 
 ---
-
-## BI Dashboard (Optional)
-
-- Final `marts` tables can be connected to a BI tool like Tableau, Power BI, or Apache Superset for visualization.
-
----
-
-## How to Run
-
-1. Clone the repo
-2. Add your Kaggle JSON to `/kaggle/kaggle.json`
-3. Run the pipeline:
-
-```bash
-docker compose up --build
-```
-
-Airflow UI will be available at: `http://localhost:8080`
+--
 
